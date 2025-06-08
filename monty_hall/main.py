@@ -1,4 +1,4 @@
-#!/usr/bin/python
+
 
 import pygame, sys
 from pygame.locals import *
@@ -25,7 +25,8 @@ x_message = 0.2*display_width
 y_message = 70
 
 clock = pygame.time.Clock()
-random.seed(datetime.now())
+# random.seed(datetime.now())
+random.seed(int(datetime.now().timestamp()))
 
 pygame.font.init() 
 myfont = pygame.font.SysFont(None, 29)
