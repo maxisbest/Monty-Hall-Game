@@ -349,7 +349,7 @@ def handle_window_resize(new_width, new_height):
     # 重新创建所有图片
     recreate_images()
     
-    print(f"窗口大小调整为: {display_width}x{display_height} (4:3 比例)")
+    # print(f"窗口大小调整为: {display_width}x{display_height} (4:3 比例)")
 
 def displayImage(x, y, currentImage):
     """显示图片"""
@@ -396,6 +396,16 @@ def setImagesRandomly():
     imageList[randomList[0]] = possibleImageList[1]  # 山羊
     imageList[randomList[1]] = possibleImageList[0]  # 汽车
     imageList[randomList[2]] = possibleImageList[1]  # 山羊
+    # 输出门后物品信息（作弊用）
+    for i in range(3):
+        if imageList[i] == possibleImageList[0]:  # 汽车
+            if i == 0:
+                print("door3-alpha")
+            elif i == 1:
+                print("door1-beta")
+            elif i == 2:
+                print("door2-gama")
+
 
 def displayStartImages():
     """显示初始的门 - 区域4"""
